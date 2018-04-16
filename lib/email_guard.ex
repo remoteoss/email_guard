@@ -7,8 +7,6 @@ defmodule EmailGuard do
 
   You can also provide your own list by implemented the `EmailGuard.List`
   behaviour and returning a list of domains.
-
-  See README.md for installation and usage.
   """
 
   @default_list [EmailGuard.DisposableList]
@@ -28,7 +26,9 @@ defmodule EmailGuard do
   for free email service providers:
 
       iex> lists = [EmailGuard.DisposableList, EmailGuard.FreeList]
-      iex> EmailGuard.check("svilen@gmail.com")
+      [EmailGuard.DisposableList, EmailGuard.FreeList]
+
+      iex> EmailGuard.check("svilen@gmail.com", lists)
       {:error, "EmailGuard.FreeList"}
 
   To provide your own custom lists, see the `EmailGuard.List` behaviour.
