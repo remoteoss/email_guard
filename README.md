@@ -47,7 +47,7 @@ for free email service providers:
 iex> lists = [EmailGuard.DisposableList, EmailGuard.FreeList]
 [EmailGuard.DisposableList, EmailGuard.FreeList]
 
-iex> EmailGuard.check("svilen@gmail.com")
+iex> EmailGuard.check("svilen@gmail.com", lists)
 {:error, "EmailGuard.FreeList"}
 ```
 
