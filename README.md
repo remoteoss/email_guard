@@ -5,7 +5,7 @@ Elixir library for detecting disposable (burner) or personal email addresses.
 Comes with two lists:
 
   - `DisposableList` largely [based on this list](https://github.com/wesbos/burner-email-providers) containing 3846 domains;
-  - `FreeList` mostly [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) minus the domains already listed in `DisposableList` containing 5072 domains.
+  - `FreeList` mostly [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) minus the domains already listed in `DisposableList`, total 5072 domains.
 
 ## Installation
 
@@ -25,23 +25,31 @@ If you're not using [application inference](https://elixir-lang.org/blog/2017/01
 
 Checks if given email or domain is present in email lists:
 
-    iex> EmailGuard.check("svilen@gmail.com")
-    :ok
+```elixir
+iex> EmailGuard.check("svilen@gmail.com")
+:ok
 
-    iex> EmailGuard.check("gmail.com")
-    :ok
+iex> EmailGuard.check("gmail.com")
+:ok
+```
 
 By default it will check against `EmailGuard.DisposableList`:
 
-    iex> EmailGuard.check("svilen@mailinator.com")
-    {:error, "EmailGuard.DisposableList"}
+```elixir
+iex> EmailGuard.check("svilen@mailinator.com")
+{:error, "EmailGuard.DisposableList"}
+```
 
 You can specify the email list modules, e.g. including the provided one
 for free email service providers:
 
-    iex> lists = [EmailGuard.DisposableList, EmailGuard.FreeList]
-    iex> EmailGuard.check("svilen@gmail.com")
-    {:error, "EmailGuard.FreeList"}
+```elixir
+iex> lists = [EmailGuard.DisposableList, EmailGuard.FreeList]
+[EmailGuard.DisposableList, EmailGuard.FreeList]
+
+iex> EmailGuard.check("svilen@gmail.com")
+{:error, "EmailGuard.FreeList"}
+```
 
 To provide your own custom list see the `EmailGuard.List` behaviour.
 
