@@ -4,8 +4,8 @@ Elixir library for detecting disposable (burner) or personal email addresses.
 
 Comes with two lists:
 
-  - `DisposableList` largely [based on this list](https://github.com/wesbos/burner-email-providers) containing 3846 domains;
-  - `FreeList` mostly [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) minus the domains already listed in `DisposableList`, total 5072 domains.
+* `DisposableList` largely [based on this list](https://github.com/wesbos/burner-email-providers) containing 3846 domains;
+* `FreeList` mostly [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) minus the domains already listed in `DisposableList`, total 5072 domains.
 
 ## Installation
 
@@ -55,11 +55,17 @@ To provide your own custom list see the `EmailGuard.List` behaviour.
 
 Note that `EmailGuard` expects a valid email address or domain as input.
 
+## Benchmark
+
+```sh
+MIX_ENV=bench mix run bench/check_bench.exs
+```
+
 ## About
 
 This project is sponsored by [Heresy](http://heresy.io). We're always looking for great engineers to join our team, so if you love Elixir, open source and enjoy some challenge, drop us a line and say hello!
 
 ## License
 
-- EmailGuard: See LICENSE file.
-- "Heresy" name and logo: Copyright © 2018 Heresy Software Ltd
+* EmailGuard: See LICENSE file.
+* "Heresy" name and logo: Copyright © 2018 Heresy Software Ltd

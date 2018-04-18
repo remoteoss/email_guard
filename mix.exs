@@ -31,7 +31,8 @@ defmodule EmailGuard.MixProject do
 
   defp deps() do
     [
-      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false},
+      {:benchee, "~> 0.13", only: :bench}
     ]
   end
 end
