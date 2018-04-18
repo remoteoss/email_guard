@@ -11,9 +11,12 @@ defmodule EmailGuardTest do
     assert EmailGuard.check(@custom) == :ok
   end
 
+  test "disposable emails are not included in FreeList" do
+    assert EmailGuard.check(@burner, [EmailGuard.FreeList]) == :ok
+  end
+
   test "accepts custom email lists" do
     assert EmailGuard.check(@free, [EmailGuard.FreeList]) == {:error, EmailGuard.FreeList}
-    assert EmailGuard.check(@burner, [EmailGuard.FreeList]) == {:error, EmailGuard.FreeList}
     assert EmailGuard.check(@custom, [EmailGuard.FreeList]) == :ok
   end
 end
