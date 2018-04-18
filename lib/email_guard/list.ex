@@ -27,6 +27,7 @@ defmodule EmailGuard.List do
 
   @spec path_to_list(String.t()) :: String.t()
   defp path_to_list(filename) do
-    Path.join([to_string(:code.priv_dir(:email_guard)), filename])
+    priv_dir_path = to_string(:code.priv_dir(:email_guard))
+    Path.join([priv_dir_path, filename])
   end
 end
