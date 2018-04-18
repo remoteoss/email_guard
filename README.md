@@ -14,7 +14,7 @@ Add to your `mix.exs`:
 ```elixir
 def deps do
   [
-    {:email_guard, "~> 1.1.0"}
+    {:email_guard, "~> 1.0"}
   ]
 end
 ```
