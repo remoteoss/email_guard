@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.1.2 (2018-04-18)
+- Remove `google.com` from `FreeList` (internal domain for Google employees only).
+
 # 1.1.1 (2018-04-18)
 - Fix regression where domains in `DisposableList` were included in `FreeList` (which is reserved for regular free email service providers like GMail, Yahoo, etc).
 
