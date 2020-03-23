@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.1.3 (2020-03-24)
+- Use [Mailchecker](https://github.com/FGRibreau/mailchecker)'s disposable email list
+
 # 1.1.2 (2018-04-18)
 - Remove `google.com` from `FreeList` (internal domain for Google employees only).
 

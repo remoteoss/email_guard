@@ -3,7 +3,8 @@ defmodule EmailGuard.DisposableList do
   Contains list of providers of disposable
   email address (aka temp or burner emails).
 
-  Credits to: https://github.com/wesbos/burner-email-providers
+  Largely based on:
+    https://raw.githubusercontent.com/FGRibreau/mailchecker/master/list.txt
   """
 
   @behaviour EmailGuard.List
