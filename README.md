@@ -61,13 +61,7 @@ Note that `EmailGuard` expects a valid email address or domain as input.
 MIX_ENV=bench mix run bench/check_bench.exs
 ```
 
-## About
-
-<img src="http://cdn.heresy.io/media/logo.png" alt="Heresy logo" width=300>
-
-This project is sponsored by [Heresy](http://heresy.io). We're always looking for great engineers to join our team, so if you love Elixir, open source and enjoy some challenge, drop us a line and say hello!
 
 ## License
 
-* EmailGuard: See LICENSE file.
-* "Heresy" name and logo: Copyright © 2019 Heresy Software Ltd
+See LICENSE file.
