@@ -4,10 +4,12 @@ Elixir library for detecting disposable (burner) or personal email addresses.
 
 Focused on **performance** and features the **largest** database of domains availble.
 
-Comes with two lists:
+Comes with two lists out of the box:
 
-* `DisposableList` based on [mailchecker's list](https://raw.githubusercontent.com/FGRibreau/mailchecker/master/list.txt), total **33,606 domains**;
-* `FreeList` [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) excl. already listed in `DisposableList`, total **5009 domains**.
+* `DisposableList` - based on [mailchecker's list](https://raw.githubusercontent.com/FGRibreau/mailchecker/master/list.txt), total **33,606 domains**;
+* `FreeList` - based on [this list](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) excl. already listed in `DisposableList`, total **5009 domains**.
+
+You can also plug your own dataset by implementing the `EmailGuard.List` behaviour ✌️
 
 ## Installation
 
