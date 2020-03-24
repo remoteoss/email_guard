@@ -4,8 +4,8 @@ Elixir library for detecting disposable (burner) or personal email addresses.
 
 Comes with two lists:
 
-* `DisposableList` largely [based on this list](https://raw.githubusercontent.com/FGRibreau/mailchecker/master/list.txt) containing 33,606 domains;
-* `FreeList` mostly [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) minus the domains already listed in `DisposableList`, total 5009 domains.
+* `DisposableList` based on [mailchecker's list](https://raw.githubusercontent.com/FGRibreau/mailchecker/master/list.txt) containing **33,606 domains**;
+* `FreeList` mostly [based on this](https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf) minus the domains already listed in `DisposableList`, total **5009 domains**.
 
 ## Installation
 
