@@ -9,16 +9,16 @@ defmodule EmailGuard.MixProject do
       version: @version,
       elixir: "~> 1.3",
       name: "EmailGuard",
-      description: "Detect disposable or personal email addresses.",
+      description: "Detect disposable (burner) or personal email addresses.",
       package: [
-        maintainers: ["Svilen Gospodinov <svilen@heresy.io>"],
+        maintainers: ["Svilen Gospodinov <webmaster@s2g.io>"],
         licenses: ["MIT"],
-        links: %{Github: "https://github.com/heresydev/email_guard"}
+        links: %{Github: "https://github.com/svileng/email_guard"}
       ],
       docs: [
         main: "readme",
         extras: ["README.md"],
-        source_url: "https://github.com/heresydev/email_guard",
+        source_url: "https://github.com/svileng/email_guard",
         source_ref: @version
       ],
       deps: deps()
@@ -31,8 +31,8 @@ defmodule EmailGuard.MixProject do
 
   defp deps() do
     [
-      {:ex_doc, "~> 0.14", only: :dev, runtime: false},
-      {:benchee, "~> 0.13", only: :bench}
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:benchee, "~> 1.0", only: :bench}
     ]
   end
 end
