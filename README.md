@@ -37,7 +37,7 @@ By default it will check against `EmailGuard.DisposableList`:
 
 ```elixir
 iex> EmailGuard.check("svilen@mailinator.com")
-{:error, "EmailGuard.DisposableList"}
+{:error, EmailGuard.DisposableList}
 ```
 
 You can specify the email list modules, e.g. including the provided one
@@ -48,7 +48,7 @@ iex> lists = [EmailGuard.DisposableList, EmailGuard.FreeList]
 [EmailGuard.DisposableList, EmailGuard.FreeList]
 
 iex> EmailGuard.check("svilen@gmail.com", lists)
-{:error, "EmailGuard.FreeList"}
+{:error, EmailGuard.FreeList}
 ```
 
 To provide your own custom list see the `EmailGuard.List` behaviour.
