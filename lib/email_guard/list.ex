@@ -12,16 +12,13 @@ defmodule EmailGuard.List do
     filename = opts[:filename] || raise(ArgumentError, message: "expected :filename")
 
     quote bind_quoted: [filepath: path_to_list(filename)] do
-      filepath
-      |> File.stream!()
-      |> Stream.map(&String.trim/1)
-      |> Stream.reject(&match?("", &1))
-      |> Enum.uniq()
-      |> Enum.map(fn domain ->
-        def lookup(unquote(domain)), do: __MODULE__
-      end)
+      @list filepath
+            |> File.stream!()
+            |> Stream.map(&String.trim/1)
+            |> Stream.reject(&match?("", &1))
+            |> Enum.into(%MapSet{})
 
-      def lookup(_unmatched_domain), do: nil
+      def lookup(domain), do: (MapSet.member?(@list, domain) && __MODULE__) || nil
     end
   end
 
