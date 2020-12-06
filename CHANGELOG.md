@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.2.0 (2020-12-06)
+- Significantly faster compile times.
+
 # 1.1.3 (2020-03-24)
 - Use [Mailchecker](https://github.com/FGRibreau/mailchecker)'s disposable email list
 
