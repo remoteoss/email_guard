@@ -6628,6 +6628,7 @@ cgrtstm0x4px.ga
 cgrtstm0x4px.gq
 cgrtstm0x4px.ml
 cgrtstm0x4px.tk
+ch.mintemail.com
 ch.tc
 cha-cha.org.pl
 chaamtravel.org
