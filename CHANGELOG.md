@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.2.1 (2021-12-15)
+- Removed tornbanner.com from disposable list of domains.
+
 # 1.2.0 (2020-12-06)
 - Significantly faster compile times.
 
