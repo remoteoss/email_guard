@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.2.2. (2022-08-29)
+- Removed easypost.com from free list of domains, added hey.com
+
 # 1.2.1 (2021-12-15)
 - Removed tornbanner.com from disposable list of domains.
 
